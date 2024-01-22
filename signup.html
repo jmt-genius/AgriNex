@@ -3,40 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <!-- Add Gun.js library -->
+    <title>AgriNex</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
 </head>
 <body>
-
-    <h2>Sign Up</h2>
-
-    <!-- Sign Up Form -->
-    <form id="signupForm">
-        <!-- Email Input -->
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <!-- Password Input -->
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <!-- Confirm Password Input -->
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required>
-
-        <!-- Submit Button -->
-        <input type="submit" value="Sign Up">
-        <p>Do you already have an account? <a href="login.html">Login Here</a>.</p>
-    </form>
-
-    <!-- JavaScript to interact with Gun.js -->
-    <script>
+    <div class="main-container">
+        <!-- <img src="./lawrence-kayku-frWOcVisp8U-unsplash.jpg" alt="background"> -->
+        <div class="nav-bar">
+            <div class="left-bar">
+                <a id="big-text">AgriNex</a>
+                
+            </div>
+            <div class="right-bar">
+                <a href="./index.html" target="_self">Plans</a>
+                <a href="#">About</a>
+                <a href="./contact.html" target="_self">Contact</a>
+            </div>
+        </div>
+        <div class="login-page" id="reg">
+            <form id="form">
+                <h1 style="margin-top: 20px;">Welcome!</h1>
+                <p id="user" style="font-weight: 600;">Username</p>
+                <div class="input-box">
+                    <input type="email" id="email" placeholder="  Enter Email" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <p id="pass" style="font-weight: 600;">Password</p>
+                <div class="input-box">
+                    <input type="password" id="password" placeholder="  Enter Password" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <p id="pass" style="font-weight: 600;">Confirm Password</p>
+                <div class="input-box">
+                    <input type="password" id="confirmPassword" placeholder="  Confirm Password" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <button type="submit" class="btn" style="border: 1px solid black;">Register</button>
+                <div class="register-link">
+                    <p style="padding-left: 30px;">Already have an account? <a href="./login.html">Login</a></p>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+     <!-- JavaScript to interact with Gun.js -->
+     <script>
         // Initialize Gun.js
         const gun = Gun();
 
         // Event listener for form submission
-        document.getElementById('signupForm').addEventListener('submit', function (event) {
+        document.getElementById('form').addEventListener('submit', function (event) {
             event.preventDefault();
 
             // Get user input values
@@ -65,6 +83,5 @@
             // Optional: Redirect to another page or perform additional actions
         });
     </script>
-
 </body>
 </html>
