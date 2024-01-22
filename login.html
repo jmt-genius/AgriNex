@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+</head>
+<body>
+
+    <h2>Login</h2>
+
+ 
+    <form id="loginForm">
+ 
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" name="loginEmail" required>
+
+ 
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="loginPassword" required>
+
+ 
+        <input type="submit" value="Login">
+    </form>
+
+    <!-- JavaScript to interact with Gun.js -->
+    <script>
+        // Initialize Gun.js
+        const gun = Gun();
+
+        // Event listener for form submission
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get user input values
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            // Retrieve user data from Gun.js
+            gun.get('users').get(email).once((userData) => {
+                if (userData && userData.password === password) {
+                    // Successful login (for demonstration purposes)
+                    alert("Login successful!");
+                } else {
+                    // Incorrect credentials
+                    alert("Invalid email or password. Please try again.");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

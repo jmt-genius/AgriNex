@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- Add Gun.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+</head>
+<body>
+
+    <h2>Sign Up</h2>
+
+    <!-- Sign Up Form -->
+    <form id="signupForm">
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <!-- Confirm Password Input -->
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Sign Up">
+    </form>
+
+    <!-- JavaScript to interact with Gun.js -->
+    <script>
+        // Initialize Gun.js
+        const gun = Gun();
+
+        // Event listener for form submission
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get user input values
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Validate password match
+            if (password !== confirmPassword) {
+                alert("Passwords do not match. Please try again.");
+                return;
+            }
+
+            // Store user information in Gun.js
+            const user = {
+                email: email,
+                password: password // In a real application, you would hash the password securely
+            };
+
+            // Save user data in Gun.js
+            gun.get('users').get(email).put(user);
+
+            // Inform the user about successful sign-up (for demonstration purposes)
+            alert("Sign up successful! User data stored in Gun.js");
+
+            // Optional: Redirect to another page or perform additional actions
+        });
+    </script>
+
+</body>
+</html>
