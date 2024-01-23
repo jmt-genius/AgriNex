@@ -1,0 +1,57 @@
+.head_container{
+    display: flex;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: white;
+    margin-bottom: 1%;
+    border-radius: 10px;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.bar{
+    margin-left: 20px;
+}
+
+.topborderlist{
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+}
+
+.items{
+    font-size: 20px;
+    padding-left: 10px;  
+    margin: 2px;  
+}
+
+.item1{
+    font-size: 20px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.lastitem{
+    padding-right: 20px;
+}
+
+.top_links{
+    text-decoration: none;
+    color: black;
+}
+
+.top_links:hover{
+    text-decoration: underline;
+    color: grey;
+}
+
+
+body{
+    background-image: url(../assets/lawrence-kayku-frWOcVisp8U-unsplash.jpg);
+}
