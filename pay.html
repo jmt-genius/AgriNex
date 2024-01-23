@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETH Transfer</title>
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+</head>
+<body>
+
+<h2>ETH Transfer Form</h2>
+
+<form id="transferForm">
+    <label for="recipientAddress">Recipient Address:</label>
+    <input type="text" id="recipientAddress" placeholder="0x...">
+
+    <label for="ethAmount">Amount (ETH):</label>
+    <input type="number" id="ethAmount" step="0.01" placeholder="0.00">
+
+    <button type="button" onclick="transferEth()">Pay</button>
+</form>
+
+<script>
+    async function transferEth() {
+        const recipientAddress = document.getElementById('recipientAddress').value;
+        const ethAmount = document.getElementById('ethAmount').value;
+
+        if (!recipientAddress || !ethAmount) {
+            alert('Please enter both recipient address and ETH amount.');
+            return;
+        }
+
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(recipientAddress, ['function transfer()'], signer);
+
+        try {
+            const transaction = {
+                to: recipientAddress,
+                value: ethers.utils.parseEther(ethAmount),
+            };
+
+            const tx = await signer.sendTransaction(transaction);
+            
+            // Wait for the transaction to be mined
+            const receipt = await tx.wait();
+
+            // Display success message
+            alert('ETH transfer successful! Transaction hash: ' + receipt.transactionHash);
+        } catch (error) {
+            console.error('Error transferring ETH:', error);
+            alert('Error transferring ETH. Please check the recipient address and try again.');
+        }
+    }
+</script>
+
+</body>
+</html>
