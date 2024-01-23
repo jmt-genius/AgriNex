@@ -167,6 +167,7 @@ i:hover{
 
 .description p{
     animation: slideFromBottom 1s ease-out;
+    color: #ffff;
 }
 
 .photo img{

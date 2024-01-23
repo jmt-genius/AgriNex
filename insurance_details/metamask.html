@@ -48,7 +48,7 @@
                     const signature = await provider.getSigner().signMessage(hashed_string);
                     // Got the signature
                     console.log("The signature: " + signature);   
-
+                    window.location.href="claim.html";
                     // TODO
                     // you can then send the signature to the webserver for further processing and verification 
                 }
