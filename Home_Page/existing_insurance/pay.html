@@ -8,10 +8,37 @@
     <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
 </head>
 <body>
-
+    <div class="main-container">
+        <!-- <img src="./lawrence-kayku-frWOcVisp8U-unsplash.jpg" alt="background"> -->
+        <div class="nav-bar">
+            <div class="left-bar">
+                <a id="big-text">AgriNex</a>
+                <!-- <img src="./icons8-farmer-90 2 (1).png" alt=""> -->
+            </div>
+            <div class="right-bar">
+                <a href="#" target="_self">Plans</a>
+                <a href="#">About</a>
+                <a href="#" target="_self">Contact</a>
+                <a href="#" target="_self">My Account</a>
+            </div>
+        </div>
 <h2>ETH Transfer Form</h2>
 
-<form id="transferForm">
+<div class="login-page">
+    <form id="transForm">
+        <h1 style="margin-top: 20px;">Payment Portal</h1>
+        <p id="user" style="font-weight: 600;">recipientAddress</p>
+        <div class="input-box">
+            <input type="text" id="recipientAddress" placeholder="  0x..." required>
+        </div>
+        <p id="pass" style="font-weight: 600;">Amount (ETH):</p>
+        <div class="input-box">
+            <input type="number" id="ethAmount" step="0.01" placeholder="  0.00" required>
+        </div>
+        <button type="button" class="btn" style="border: 1px solid black;" onclick="transferEth()">Pay Premium</button>
+    </form>
+</div>
+<!-- <form id="transferForm">
     <label for="recipientAddress">Recipient Address:</label>
     <input type="text" id="recipientAddress" placeholder="0x...">
 
@@ -19,8 +46,8 @@
     <input type="number" id="ethAmount" step="0.01" placeholder="0.00">
 
     <button type="button" onclick="transferEth()">Pay</button>
-</form>
-
+</form> -->
+    </div>
 <script>
     async function transferEth() {
         const recipientAddress = document.getElementById('recipientAddress').value;
