@@ -95,6 +95,18 @@ body{
     opacity: 0.8;
 }
 
+.new-insurance:hover{
+    box-shadow: 5px 5px 5px black ;
+}
+.existing-insurance:hover{
+    box-shadow: 5px 5px 5px black ;
+}
+
+.new-insurance a{
+    text-decoration: none;
+    color: black;
+}
+
 .existing-insurance{
     font-size: 30px;
     font-weight: 600;
@@ -109,12 +121,6 @@ body{
     opacity: 0.8;
 }
 
-.existing-insurance :hover{
-    text-decoration: underline;
-}
-.new-insurance :hover{
-    text-decoration: underline;
-}
 
 @keyframes slideFromLeft {
     from {
