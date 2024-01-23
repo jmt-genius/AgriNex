@@ -14,6 +14,24 @@ body{
     height: 100vh;
 }
 
+.text{
+    /* position: relative; */
+    height: 80px;
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.text h2{
+    font-size: 35px;
+    color: #ffff;
+}
+
+.text p{
+    font-size: 25px;
+    color: #ffff;
+}
+
 .nav-bar {
     position: absolute;
     background-color: white;
@@ -48,7 +66,8 @@ body{
 
 .login-page{
     margin-left: 38%;
-    margin-top: 100px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     height: 400px;
     width: 400px;
     background:white;
@@ -61,7 +80,8 @@ body{
 
 #reg{
     margin-left: 38%;
-    margin-top: 100px;
+    margin-top: 50px;
+    /* margin-bottom: 70px; */
     height: 500px;
     width: 400px;
     background:white;
@@ -153,13 +173,13 @@ i:hover{
 
 .description{
     position: absolute;
-    bottom: 70px;
     width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding-left: 180px;
+    margin-top: 35px;
 }
 
 .description p{
@@ -189,6 +209,10 @@ i:hover{
 
 .photo img{
     animation: popIn 1s ease-out; 
+}
+
+.text{
+    animation: slideFromTop 1s ease-out;
 }
 
 @keyframes slideFromLeft {
