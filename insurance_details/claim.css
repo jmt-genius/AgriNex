@@ -24,6 +24,13 @@ body{
     text-align: center;
 }
 
+.text2{
+    margin-top: 50px;
+}
+.text2 a{
+    color: white;
+    text-decoration: none;
+}
 .text h2{
     font-size: 35px;
     color: #ffff;
