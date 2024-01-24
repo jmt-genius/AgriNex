@@ -16,11 +16,11 @@
                 <a id="big-text">AgriNex</a>
                 <!-- <img src="./icons8-farmer-90 2 (1).png" alt=""> -->
             </div>
-            <div class="right-bar">
+            <!-- <div class="right-bar">
                 <a href="#" target="_self">Plans</a>
                 <a href="#">About</a>
                 <a href="#" target="_self">Contact</a>
-            </div>
+            </div> -->
         </div>
         <div class="text">
             <h2>AgriNex</h2>
@@ -28,26 +28,26 @@
         </div>
         <div class="login-page">
             <form id="form">
-                <h1 style="margin-top: 20px;">Welcome!</h1>
-                <p id="user" style="font-weight: 600;">Username</p>
-                <div class="input-box">
-                    <input type="email" id="loginEmail" placeholder="  Enter Email" required>
-                    <i class='bx bxs-user'></i>
-                </div>
-                <p id="pass" style="font-weight: 600;">Password</p>
-                <div class="input-box">
-                    <input type="password" id="loginPassword" placeholder="  Enter Password" required>
-                    <i class='bx bxs-lock-alt' ></i>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox" > Remember me</label>
-                </div>
-                <button type="submit" class="btn" style="border: 1px solid black;">Login</button>
-                <div class="register-link">
-                    <p style="padding-left: 30px;">Don't have an account? <a href="./signup.html">Register</a></p>
-                </div>
+                    <h1 style="margin-top: 20px;">Welcome!</h1>
+                    <p id="user" style="font-weight: 600;">Username</p>
+                    <div class="input-box">
+                        <input type="email" id="loginEmail" placeholder="  Enter Email" required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <p id="pass" style="font-weight: 600;">Password</p>
+                    <div class="input-box">
+                        <input type="password" id="loginPassword" placeholder="  Enter Password" required>
+                        <i class='bx bxs-lock-alt' ></i>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox" > Remember me</label>
+                        <a href="./forgot.html">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn" style="border: 1px solid black;">Login</button>
+                    <div class="register-link">
+                        <p style="padding-left: 30px;">Don't have an account? <a href="./signup.html">Register</a></p>
+                    </div>
             </form>
-        </div>
         </div>
     </div>
         <!-- JavaScript to interact with Gun.js -->
@@ -67,7 +67,7 @@
             gun.get('users').get(email).once((userData) => {
                 if (userData && userData.password === password) {
                     // Successful login (for demonstration purposes)
-                    window.location.href = 'Home_Page/home.html';
+                    window.location.href = "Home_Page/home.html";
                 } else {
                     // Incorrect credentials
                     alert("Invalid email or password. Please try again.");
