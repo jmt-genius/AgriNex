@@ -1,15 +1,13 @@
-.head_container{
-    display: flex;
-    font-size: 10px;
-    font-weight: bold;
-    background-color: white;
-    margin-bottom: 1%;
-
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
 body{
-    background-image: url(../assets/lawrence-kayku-frWOcVisp8U-unsplash.jpg);
+    background-image: url("/assets/lawrence-kayku-frWOcVisp8U-unsplash.jpg");
 }
+
 
 .main-container img{
     width: 100%;
@@ -39,9 +37,7 @@ body{
     background-color: white;
     width: 100%;
     height: 60px;
-    margin-top: 30px;
-    bottom: 635px;
-    right: 5px;
+    bottom: 645px;
     display: flex;
     gap: 650px;
 }
@@ -68,13 +64,9 @@ body{
     font-size: 30px;
 }
 
-.lol{
-    margin-top: 100px;
-}
 .login-page{
     margin-left: 38%;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 100px;
     height: 400px;
     width: 400px;
     background:white;
@@ -142,3 +134,112 @@ body{
 i:hover{
     scale: 1.2;
 }
+
+.login-page .btn{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 45px;
+    background-color: #ffff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+
+.right-bar a:hover{
+    transform: scale(1.1);
+    color: aqua;
+}
+
+.left-bar a{
+    animation: appearFromLeft 1s ease-out;
+}
+
+.right-bar a{
+    animation: slideFromTop 1s ease-out;
+}
+
+.description p{
+    animation: slideFromBottom 1s ease-out;
+    color: #ffff;
+}
+
+.photo img{
+    animation: popIn 1s ease-out; 
+}
+
+.text{
+    animation: slideFromTop 1s ease-out;
+}
+
+@keyframes slideFromLeft {
+from {
+    transform: translateX(-100%);
+}
+to {
+    transform: translateX(0);
+}
+}
+
+@keyframes slideFromRight {
+from {
+    transform: translateX(100%);
+}
+to {
+    transform: translateX(0);
+}
+}
+  
+@keyframes slideFromTop {
+from {
+    transform: translateY(-100%);
+}
+to {
+    transform: translateY(0);
+}
+}
+  
+@keyframes slideFromBottom {
+from {
+    transform: translateY(100%);
+}
+to {
+    transform: translateY(0);
+}
+}
+
+@keyframes appearFromLeft {
+from {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
+  }
+
+@keyframes popIn {
+from {
+    opacity: 0;
+    transform: scale(0.5);
+}
+to {
+    opacity: 1;
+    transform: scale(1);
+}
+}
+
+  
+  
+  
+
+
+
+  

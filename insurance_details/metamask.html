@@ -2,8 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Web3 Login process with MetaMask</title>
+        <title>Connect with MetaMask</title>
         <script src="https://cdn.ethers.io/lib/ethers-5.6.4.umd.min.js" type="application/javascript"></script>
+        <link rel="stylesheet" href="./metamask.css">
         <script>
             function web3_check_metamask() {
                 if (!window.ethereum) {
@@ -11,8 +12,7 @@
                     alert('It seems that the MetaMask extension is not detected. Please install MetaMask first.');
                     return false;
                 }else{
-                    console.log('MetaMask extension has been detected!!');
-                    alert('MetaMask Extension has been detected! ');
+                    alert('MetaMask extension has been detected!!');
                     return true;
                 }
             }
@@ -56,7 +56,37 @@
         </script>
     </head>
     <body>
-        <p>Check first if MetaMask is installed: <a href="#!" onclick="web3_check_metamask();">Detect MetaMask</a></p>
-        <p>Initate the Login process: <a href="#!" onclick="web3_metamask_login();">Login with MetaMask</a></p>
+        <div class="main-container">
+            <!-- <img src="./lawrence-kayku-frWOcVisp8U-unsplash.jpg" alt="background"> -->
+            <div class="nav-bar">
+                <div class="left-bar">
+                    <a id="big-text">AgriNex</a>
+                    <!-- <img src="./icons8-farmer-90 2 (1).png" alt=""> -->
+                </div>
+                <div class="right-bar">
+                    <a href="#" target="_self">Plans</a>
+                    <a href="#">About</a>
+                    <a href="#" target="_self">Contact</a>
+                    <a href="#" target="_self">My Account</a>
+                </div>
+            </div>
+            <div class="login-page">
+                <form id="transForm">
+                    <!-- <h1 style="margin-top: 20px;">Payment Portal</h1>
+                    <p id="user" style="font-weight: 600;">recipientAddress</p>
+                    <div class="input-box">
+                        <input type="text" id="recipientAddress" placeholder="  0x..." required>
+                    </div>
+                    <p id="pass" style="font-weight: 600;">Amount (ETH):</p>
+                    <div class="input-box">
+                        <input type="number" id="ethAmount" step="0.01" placeholder="  0.00" required>
+                    </div> -->
+                    <button type="button" class="btn" style="border: 1px solid black;" onclick="web3_check_metamask();">Detect Metamask</button>
+                    <button type="button" class="btn" style="border: 1px solid black;" onclick="web3_metamask_login();">Connect Wallet</button>
+                </form>
+            </div>
+        <!-- <p>Check first if MetaMask is installed: <a href="#!" onclick="web3_check_metamask();">Detect MetaMask</a></p>
+        <p>Initate the Login process: <a href="#!" onclick="web3_metamask_login();">Login with MetaMask</a></p> -->
+        </div>
     </body>
 </html>
