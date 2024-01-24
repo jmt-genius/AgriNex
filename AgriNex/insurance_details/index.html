@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gun.js Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>   
+    <div class="main-container">
+    <!-- <img src="./lawrence-kayku-frWOcVisp8U-unsplash.jpg" alt="background"> -->
+    <div class="nav-bar">
+        <div class="left-bar">
+            <a id="big-text">AgriNex</a>
+            <!-- <img src="./icons8-farmer-90 2 (1).png" alt=""> -->
+        </div>
+        <div class="right-bar">
+            <a href="#" target="_self">Plans</a>
+            <a href="#">About</a>
+            <a href="#" target="_self">Contact</a>
+            <a href="#" target="_self">My account</a>
+        </div>
+    </div>
+    <div class="text">
+        <h2>AgriNex</h2>
+        <p>Revolutionizing Crop Insurance with Blockchain and Defi</p>
+    </div>
+    </div>
+    <div class="main">
+        <h1>City and Wallet ID</h1>
+        <form id="dataForm">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            <br>
+            <label for="walletId">Wallet ID:</label>
+            <input type="text" id="walletId" name="walletId" required>
+            <br>
+            <button type="button" onclick="saveData()">Submit</button>
+        </form>
+    </div>
+
+    <script src="gun.js"></script>
+</body>
+
+</html>

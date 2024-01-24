@@ -1,0 +1,106 @@
+.head_container{
+    display: flex;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: white;
+    border-bottom: 2px solid black;
+    margin-bottom: 1%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.bar{
+    margin-left: 20px;
+}
+
+.topborderlist{
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+}
+
+.items{
+    font-size: 20px;
+    padding-left: 10px;  
+    margin: 2px;  
+}
+
+.item1{
+    font-size: 20px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.lastitem{
+    padding-right: 20px;
+}
+
+.top_links{
+    text-decoration: none;
+    color: black;
+}
+
+.top_links:hover{
+    text-decoration: underline;
+    color: grey;
+}
+
+
+.therest{
+    background-image: url(./lawrence-kayku-frWOcVisp8U-unsplash.jpg);
+    height: 800px;
+    opacity: 0.8;
+}
+
+.maintext{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 40px;
+    opacity: 1;
+    color: white;
+}
+
+.mid_links{
+    color: white;
+}
+
+.buttons{
+    margin-left: 50px;
+    font-size: 20px;
+    color: black;
+}
+
+.mid1{
+    text-align: center;
+    border: 1px solid white;
+    margin-bottom: 40px;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.mid2{
+    text-align: center;
+    border: 1px solid white;
+    margin-bottom: 10px;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.mid_links{
+    text-decoration: none;
+    color: black;
+}
+
+.mid_links:hover{
+    color: grey;
+}
